@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrap">
+		<footer>
+			<ul class="tabs">
+				<li><p><img src="1.png" alt=""></p>电源</li>
+				<li><p><img src="1.png" alt=""></p>首页</li>
+				<li><p><img src="1.png" alt=""></p>菜单</li>
+				<li><p><img src="1.png" alt=""></p>截屏</li>
+			</ul>
+		</footer>
+		<div class="content">
+			<div class="tab1">
+				<p>111</p>
+			</div>
+			<div class="tab2 hide">
+				<p>222</p>
+			</div>
+			<div class="tab3 hide">
+				<p>333</p>
+			</div>
+			<div class="tab4 hide">
+				<p>444</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+	$(function(){
+		$('.tabs').on('click','li',function(){
+			var index=$(this).index();
+			$('.content').find('div').eq(index).show().siblings().hide();
+		})
+	})
+</script>
